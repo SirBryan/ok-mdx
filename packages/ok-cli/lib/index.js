@@ -134,6 +134,7 @@ const start = async (opts = {}) => {
   const app = new Koa()
   opts.hotPort = await getPort()
   const hotClient = {
+    host: { client: '*', server: '0.0.0.0' },
     port: opts.hotPort,
     logLevel: 'error'
   }
